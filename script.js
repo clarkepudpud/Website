@@ -3,7 +3,7 @@ const preview = document.getElementById('profilePreview');
 
 // ==== New Section Toggle Logic ====
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = ['home', 'about', 'projects', 'experience', 'contact'];
+  const sections = ['home', 'about', 'projects', 'experience', 'contact', 'myai'];
   const navLinks = document.querySelectorAll('.nav-menu a');
   const homeBtn = document.getElementById('homeBtn');
   const titleClick = document.getElementById('titleClick');
