@@ -377,17 +377,24 @@ body {
     overflow-y: auto;
   }
 
+ @media (max-width: 768px) {
   .input-area {
-    flex-direction: column;
+    flex-direction: row; /* ✔ Panatilihin na row layout kahit mobile */
+    align-items: center;
   }
 
-  .input-area input,
+  .input-area input {
+    flex: 1; /* ✔ Para sakupin ang natitirang space */
+  }
+
   .input-area button {
-    width: 100%;
+    flex-shrink: 0; /* ✔ Panatilihing maliit ang button */
   }
 
   .sidebar li {
     font-size: 14px;
     padding: 8px;
   }
+ }
+
 }
