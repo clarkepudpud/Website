@@ -130,7 +130,7 @@ addChatBubble("bot", answerText, followUpList);
 
   } else {
     setTimeout(() => {
-      addChatBubble("bot", "Apologies, I don't have an answer to that question.");
+      addChatBubble("bot", "Sorry, I don't have an answer to that question.");
     }, 800);
   }
 
