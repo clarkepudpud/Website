@@ -176,6 +176,37 @@ footer {
   border-radius: 8px;
 }
 
+@media (max-width: 600px) {
+  .blank-box {
+    width: 90%;
+    height: 200px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .header-text p {
+    text-align: center;
+  }
+}
+
 /* FAQ */
 
 /*  General body styles */
@@ -322,33 +353,41 @@ body {
   height: 100%;
 }
 
-@media (max-width: 600px) {
-  .blank-box {
-    width: 90%;
-    height: 200px;
+/* 📱 Responsive layout for FAQ section (mobile and tablets) */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column; /* Sidebar sa taas, chat area sa baba */
+    height: auto; /* Hayaan mag-adjust ang height */
   }
 
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    margin: auto;
+  .sidebar {
+    width: 100%; /* Gawin buong lapad sa mobile */
+    padding: 15px;
+    max-height: 200px; /* Limit height para may scroll */
+    overflow-x: auto;
   }
 
-  .header-content {
+  .chat-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .chatbox {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .input-area {
     flex-direction: column;
-    align-items: center;
   }
 
-  .nav-menu {
-    justify-content: center;
+  .input-area input,
+  .input-area button {
+    width: 100%;
   }
 
-  .header-text h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .header-text p {
-    text-align: center;
+  .sidebar li {
+    font-size: 14px;
+    padding: 8px;
   }
 }
