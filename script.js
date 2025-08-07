@@ -15,13 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const titleClick = document.getElementById('titleClick');
 
   function showSection(idToShow) {
-    sections.forEach(id => {
-      const section = document.getElementById(id);
-      if (section) {
-        section.style.display = (id === idToShow) ? 'block' : 'none';
-      }
-    });
+  const footer = document.getElementById("siteFooter"); // get the footer
+
+  sections.forEach(id => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.style.display = (id === idToShow) ? 'block' : 'none';
+    }
+  });
+
+  // Hide footer if FAQ, show otherwise
+  if (idToShow === 'faq') {
+    footer.style.display = 'none';
+  } else {
+    footer.style.display = 'block';
   }
+}
 
   // Initial: show only home
   showSection('home');
@@ -186,7 +195,7 @@ const faqData = [
   {
     question: "Hi", // English
     altQuestions: [
-      "Hi po", //Filipino
+      "Hi po", // Filipino
       "", // Cebiano
     ],
     answer: {
@@ -199,6 +208,22 @@ const faqData = [
     followUps: {},
 
     hideFromList: true
+  },
+  {
+    question: "Hello", // English
+    altQuestions: [
+      "Hello po", // Filipino
+    ],
+    answer: {
+      en: 
+      "Hello! What can I do for you today?",
+
+      tl:
+      "Hello! Anong maitutulong ko?"
+    },
+
+    hideFromList: true
+
   },
   {
   question: "Who are you?", //Engish
