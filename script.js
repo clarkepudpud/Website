@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const titleClick = document.getElementById('titleClick');
 
   function showSection(idToShow) {
-  const footer = document.getElementById("siteFooter"); // get the footer
+  const footer = document.getElementById("siteFooter");
 
   sections.forEach(id => {
     const section = document.getElementById(id);
@@ -24,12 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Hide footer if FAQ, show otherwise
-  if (idToShow === 'faq') {
-    footer.style.display = 'none';
-  } else {
-    footer.style.display = 'block';
-  }
+  // Show footer only in Home, hide in all others
+  footer.style.display = (idToShow === 'home') ? 'block' : 'none';
 }
 
   // Initial: show only home
@@ -212,7 +208,7 @@ const faqData = [
   {
     question: "Hello", // English
     altQuestions: [
-      "Hello po", // Filipino
+      "Hello po", // Filipino 
     ],
     answer: {
       en: 
